@@ -4,11 +4,11 @@ This is how to install and run the App:
 
 Need to have Node.js installed on your machine
 
-Clone or Download the DrinkChoiceApp repository into your manchine
+Clone or Download the DrinkChoiceApp repository into your machine
 
-Navigate into the repository using : cd "repository" command
+Navigate into the repository using : "cd repository" command
 
-Then run : npm start to launch the app, then it will open in a new browser
+Then run : "npm start" command to launch the app, then it will open in a new browser
 
 Additions made:
 

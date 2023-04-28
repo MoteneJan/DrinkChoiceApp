@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom'
+import DrinkChoiceForm from './DrinkChoiceForm'
 import App from './App'
-import './index.css'
 
 ReactDOM.render( < App / > , document.querySelector('#root'));
+ReactDOM.render( < DrinkChoiceForm / > , document.querySelector('#root'));

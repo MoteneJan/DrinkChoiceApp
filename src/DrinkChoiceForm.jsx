@@ -42,17 +42,14 @@ function DrinkChoiceForm() {
       <h1>Drink Choice Model</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Name:
-          <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
+          <input type="text" value={DrinkName} onChange={(event) => setName(event.target.value)} />
         </label>
         <br />
         <label>
-          Type:
           <input type="text" value={type} onChange={(event) => setType(event.target.value)} />
         </label>
         <br />
         <label>
-          Rating:
           <input type="number" value={rating} onChange={(event) => setRating(event.target.value)} />
         </label>
         <br />

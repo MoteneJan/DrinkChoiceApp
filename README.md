@@ -1,4 +1,4 @@
-Drinnk Choice App
+Drink Choice App
 
 This is how to install and run the App:
 Need to have Node.js installed on your machine

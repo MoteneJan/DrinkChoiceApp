@@ -6,7 +6,7 @@ Need to have Node.js installed on your machine
 
 Clone or Download the DrinkChoiceApp repository into your machine
 
-Navigate into the repository using : "cd repository" command
+Navigate into the repository using : "cd repository name" command
 
 Then run : "npm start" command to launch the app, then it will open in a new browser
 

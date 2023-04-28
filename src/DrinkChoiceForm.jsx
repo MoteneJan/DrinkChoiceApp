@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 
@@ -21,6 +21,13 @@ function DrinkChoiceForm() {
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);
+    axios.post('/api/drinks', { name, type, rating })
+      .then((response) => {
+        console.log('Drink saved successfully');
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
     if (isAuthenticated) {
       // Query the model and display the decision
@@ -30,22 +37,28 @@ function DrinkChoiceForm() {
     }
   }
 
-    return (
-        <div>
-          <h2>{model}</h2>
-
-         
-          <form onSubmit={handleSubmit}>
-            {variables.map((variable) => (
-              <div key={variable.name}>
-                <label>{variable.label}</label>
-                <input name={variable.name} type={variable.type} required={variable.required} />
-              </div>
-            ))}
-            <button type="submit">Get Decision</button>
-          </form>
-          
-        </div>
-    );
+  return (
+    <div>
+      <h1>Drink Choice Model</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
+        </label>
+        <br />
+        <label>
+          Type:
+          <input type="text" value={type} onChange={(event) => setType(event.target.value)} />
+        </label>
+        <br />
+        <label>
+          Rating:
+          <input type="number" value={rating} onChange={(event) => setRating(event.target.value)} />
+        </label>
+        <br />
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  );
 }
 export default DrinkChoiceForm;
